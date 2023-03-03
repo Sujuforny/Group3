@@ -48,26 +48,26 @@ public class Condo2 {
         }
 
         //sell
-        System.out.print("Please enter the number of floors: ");
-        int sellFloor = Input.nextInt()-1;
-
-        System.out.print("Please enter the number of Room: ");
-        int sellRoom = Input.nextInt()-1;
-
-        for(int i =0; i<sellFloor; i++){
-            for(int j=0; j<sellRoom; j++){
-                name[sellFloor][sellRoom]=null;
-
-            }
-            System.out.println();
-        }
-        //display
-        for(int i =0; i<numFloors; i++){
-            for(int j=0; j<numRoom; j++){
-                System.out.print(name[i][j]+ " ");
-            }
-            System.out.println();
-        }
+//        System.out.print("Please enter the number of floors: ");
+//        int sellFloor = Input.nextInt()-1;
+//
+//        System.out.print("Please enter the number of Room: ");
+//        int sellRoom = Input.nextInt()-1;
+//
+//        for(int i =0; i<sellFloor; i++){
+//            for(int j=0; j<sellRoom; j++){
+//                name[sellFloor][sellRoom]=null;
+//
+//            }
+//            System.out.println();
+//        }
+//        //display
+//        for(int i =0; i<numFloors; i++){
+//            for(int j=0; j<numRoom; j++){
+//                System.out.print(name[i][j]+ " ");
+//            }
+//            System.out.println();
+//        }
 
 
 
@@ -83,20 +83,22 @@ public class Condo2 {
 
         //search name
         Input.nextLine();
-        System.out.println("Enter Name for Search: ");
+        System.out.print("Enter Name for Search: ");
         String NameEnter = Input.nextLine();
+        for (int z = 0; z < numFloors; z++) {
+            for (int j = 0; j < numRoom; j++) {
+                if (!(name[z][j]==null)){
+                    int showfloor =z+1;
+                    int showroom=j+1;
+                    if (name[z][j].equals(NameEnter)){
+                        System.out.println("Owner:"+name[z][j]);
+                        System.out.println("Floor:"+showfloor);
+                        System.out.println("Room:"+showroom);
+                    }
+                }
 
-        for(int i =0; i<searchFloor; i++){
-            for(int j=0; j<searchRoom; j++){
-               if(!(name[i][j]==null)){
-                   if(name[i][j].equals(NameEnter)){
-                       System.out.println(name[i][j]);
-                   }
-               }else {
-                   System.out.println("Name not Found..!");
-               }
             }
-            System.out.println();
         }
+
     }
 }
