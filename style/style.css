@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: 2s;
+    background-color: #000;
+}
+.container,.container1,.container2
+{
+    background-color:aqua ;
+    width: 50px;
+    height: 100px;
+    border-radius: 50px;
+    margin-left: 10px;
+    transition: 2s;
+}
+
+.container{
+    animation: 5s infinite pi;
+}
+.container1{
+    animation: 5s infinite pi1;
+}
+
+@keyframes  pi{
+    50%{
+        transition: 2s;
+        box-shadow: 1px 1px 2px 1px #66a1b7;
+        background-color: white;
+        width: 100px;
+    }
+
+}
+
+@keyframes  pi1{
+    100%{
+        transition: 2s;
+        box-shadow: 1px 1px 2px 1px #66a1b7;
+        background-color: white;
+        width: 100px;
+    }
+}
+
+
+
+
+
